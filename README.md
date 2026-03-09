@@ -10,12 +10,12 @@ Python generator for chunking Pandas DataFrames without splitting identical valu
 * Validates column existence and data sorting before execution.
 
 ## 📁 Structure
-* `df_chunker.py`: Core logic/generator.
-* `test_df_chunker.py`: Pytest suite (coverage for edge cases, sorting, and size constraints).
+* `df_utils/df_chunker.py`: Core logic/generator.
+* `tests/test_df_chunker.py`: Pytest suite (coverage for edge cases, sorting, and size constraints).
 
 ## 🪄 Usage
 ```python
-from df_chunker import get_series_chunks
+from df_utils.df_chunker import get_series_chunks
 
 
 for chunk in get_series_chunks(df, series="dt", target_chunk_size=96):
@@ -25,7 +25,7 @@ for chunk in get_series_chunks(df, series="dt", target_chunk_size=96):
 ## ✨ Testing
 ```bash
 pip install -r requirements.txt
-pytest test_df_chunker.py
+python -m pytest
 ```
 
 ## 🧮 Complexity

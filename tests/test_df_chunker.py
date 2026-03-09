@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import pytest
-from df_chunker import get_series_chunks
+from df_utils.df_chunker import get_series_chunks
 
 
 @pytest.fixture
